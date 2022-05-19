@@ -1,0 +1,26 @@
+{
+    "bbb_chr_big_buck_bunny": {
+        "name": "Big Buck Bunny",
+        "description": "\u4e0d\u662f\u5427",
+        "creator": "Blender Foundation",
+        "created": "2008/05/28",
+        "modified": "2022/05/20 00:14:19",
+        "image_path": "big_buck_bunny.jpg"
+    },
+    "bbb_chr_flying_squirrel": {
+        "name": "Flying Squirrel",
+        "description": "The main villian. This guy is really bad!",
+        "creator": "Blender Foundation",
+        "created": "2008/05/29",
+        "modified": "2019/01/02 12:00:00",
+        "image_path": "flying_squirrel.jpg"
+    },
+    "bbb_chr_butterfly": {
+        "name": "Butterfly",
+        "description": "Innocent victim of the flying squirrel.",
+        "creator": "Blender Foundation",
+        "created": "2008/05/30",
+        "modified": "2019/01/03 12:00:00",
+        "image_path": "butterfly.jpg"
+    }
+}
