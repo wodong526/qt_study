@@ -161,8 +161,8 @@ if __name__ == '__main__':
     app.setStyle(QtWidgets.QStyleFactory.create('fusion'))#将控件设置为更好看的圆角
 
     dark_palette = QtGui.QPalette()
-    dark_palette.setColor(QtGui.QPalette.Window, QtGui.QColor(143, 117, 150))
-    dark_palette.setColor(QtGui.QPalette.WindowText, QtGui.QColor(208, 208, 208))
+    dark_palette.setColor(QtGui.QPalette.Window, QtGui.QColor(143, 117, 150))    #改变窗口底色
+    dark_palette.setColor(QtGui.QPalette.WindowText, QtGui.QColor(208, 208, 208))#改变控件文本颜色
 
     app.setPalette(dark_palette)
 
