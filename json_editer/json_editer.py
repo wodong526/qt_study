@@ -156,7 +156,15 @@ class JsonEditer(QtWidgets.QWidget):
         self.refresh_ass_details(self.ass_cmb.currentText())#对行编辑器填入json文本里对应的内容
 
 if __name__ == '__main__':
+
     app = QtWidgets.QApplication(sys.argv)
+    app.setStyle(QtWidgets.QStyleFactory.create('fusion'))#将控件设置为更好看的圆角
+
+    dark_palette = QtGui.QPalette()
+    dark_palette.setColor(QtGui.QPalette.Window, QtGui.QColor(143, 117, 150))
+    dark_palette.setColor(QtGui.QPalette.WindowText, QtGui.QColor(208, 208, 208))
+
+    app.setPalette(dark_palette)
 
     a = JsonEditer()
     a.show()
