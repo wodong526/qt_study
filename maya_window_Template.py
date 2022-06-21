@@ -1,9 +1,12 @@
 import pstats
+
+from sqlalchemy import true
 from PySide2 import QtCore
 from PySide2 import QtWidgets
 from PySide2 import QtGui
 from shiboken2 import wrapInstance
 
+import maya.cmds as mc
 import maya.OpenMayaUI as omui
 
 def maya_main_window():
@@ -15,7 +18,10 @@ class WindowClassName(QtWidgets.QDialog):
         super(SpinBoxDialog, self).__init__(parent)
 
         self.setWindowTitle('窗口抬头')
-        self.setWindowFlags(self.windowFlags() ^ QtCore.Qt.WindowContextHelpButtonHint)#删除窗口上的帮助按钮
+        if mc.about(ntOs = True):#判断系统类型
+            self.setWindowFlags(self.windowFlags() ^ QtCore.Qt.WindowContextHelpButtonHint)#删除窗口上的帮助按钮
+        elif mc.about(macOS = True):
+            self.setWindowFlags(QtCore.Qt.Tool)
 
         self.create_widgets()
         self.create_layout()
