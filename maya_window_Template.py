@@ -10,9 +10,9 @@ def maya_main_window():
     main_window_ptr = omui.MQtUtil.mainWindow()
     return wrapInstance(int(main_window_ptr), QtWidgets.QWidget)
 
-class WindowClassName(QtWidgets.QDialog):
+class TestWindow(QtWidgets.QDialog):
     def __init__(self, parent = maya_main_window()):
-        super(WindowClassName, self).__init__(parent)
+        super(TestWindow, self).__init__(parent)
 
         self.setWindowTitle('窗口抬头')
         if mc.about(ntOS = True):#判断系统类型
@@ -40,5 +40,5 @@ if __name__ == '__main__':
     except:
         pass
     finally:
-        my_window = WindowClassName()
+        my_window = TestWindow()
         my_window.show()
