@@ -14,7 +14,7 @@ class TestWindow(QtWidgets.QDialog):
     def __init__(self, parent = maya_main_window()):
         super(TestWindow, self).__init__(parent)
 
-        self.setWindowTitle('窗口抬头')
+        self.setWindowTitle(u'窗口抬头')
         if mc.about(ntOS = True):#判断系统类型
             self.setWindowFlags(self.windowFlags() ^ QtCore.Qt.WindowContextHelpButtonHint)#删除窗口上的帮助按钮
         elif mc.about(macOS = True):
