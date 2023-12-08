@@ -38,9 +38,9 @@ class TreeViewDialog(QtWidgets.QDialog):
         self.refresh_tree_widget()
 
     def create_actions(self):
-        self.about_action = QtWidgets.QAction(QtGui.QIcon(':help.png'), u'关于')
+        self.about_action = QtWidgets.QAction(QtGui.QIcon(':help.png'), u'关于', self)
         
-        self.display_action = QtWidgets.QAction(u'形状')
+        self.display_action = QtWidgets.QAction(u'形状', self)
         self.display_action.setCheckable(True)#生成复选框
         self.display_action.setChecked(True)#勾选复选框
         self.display_action.setShortcut(QtGui.QKeySequence('Ctrl+Shift+H'))

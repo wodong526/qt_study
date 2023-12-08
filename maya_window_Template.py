@@ -8,8 +8,7 @@ import maya.cmds as mc
 import maya.OpenMayaUI as omui
 
 def maya_main_window():
-    main_window_ptr = omui.MQtUtil.mainWindow()
-    return wrapInstance(int(main_window_ptr), QtWidgets.QWidget)
+    return wrapInstance(int(omui.MQtUtil.mainWindow()), QtWidgets.QWidget)
 
 class TestWindow(QtWidgets.QDialog):
     def __init__(self, parent = maya_main_window()):
